@@ -1,0 +1,64 @@
+.maccon {
+	width: 16px;
+	height: 16px;
+	background-color: #999;
+	display: block;
+	border-radius: 999px;
+
+	margin: 6px 0;
+
+	&::after {
+		display: none;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		font-size: 14px;
+		cursor: pointer;
+
+		transform: translate(-50%, -50%);
+	}
+}
+
+*:hover > .maccon::after {
+	display: block;
+}
+
+.maccon_color_red {
+	background-color: #c00;
+	position: relative;
+
+	&::after {
+		content: '+';
+		color: #800;
+		transform: translate(-50%, -50%) rotateZ(45deg);
+		font-size: 20px;
+	}
+}
+.maccon_color_green {
+	background-color: #0c0;
+
+	position: relative;
+
+	&::after {
+		content: '○';
+		color: #080;
+		font-size: 20px;
+	}
+}
+.maccon_color_yellow {
+	background-color: #ec0;
+	position: relative;
+
+	&::after {
+		content: '▢';
+		color: #a80;
+		font-size: 13px;
+	}
+}
+
+.maccons {
+	display: flex;
+	gap: 4px;
+}

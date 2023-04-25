@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  margin: 16px 0;
+}
+
+.wrapper {
+  background-color: #eee;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px;
+}
+
+.maccon {
+  width: 16px;
+  height: 16px;
+  background-color: #999;
+  display: block;
+  border-radius: 999px;
+  margin: 6px 0;
+}
+.maccon::after {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+*:hover > .maccon::after {
+  display: block;
+}
+
+.maccon_color_red {
+  background-color: #c00;
+  position: relative;
+}
+.maccon_color_red::after {
+  content: "+";
+  color: #800;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  font-size: 20px;
+}
+
+.maccon_color_green {
+  background-color: #0c0;
+  position: relative;
+}
+.maccon_color_green::after {
+  content: "○";
+  color: #080;
+  font-size: 20px;
+}
+
+.maccon_color_yellow {
+  background-color: #ec0;
+  position: relative;
+}
+.maccon_color_yellow::after {
+  content: "▢";
+  color: #a80;
+  font-size: 13px;
+}
+
+.maccons {
+  display: flex;
+  gap: 4px;
+}
+
+input, button, select {
+  background-color: #ccc;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #777;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+input[type=text], select {
+  width: 200px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+input[type=checkbox] + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #0c0;
+  border-radius: 999px;
+}
+input[type=checkbox]:checked + label::before {
+  content: "+";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #080;
+}
+
+.form__block {
+  margin: 8px 0;
+}
+.form__label {
+  display: inline-block;
+  width: 170px;
+}
+.form__select {
+  margin-bottom: 8px;
+}
+.form__select .form__label {
+  margin-bottom: 8px;
+}
+
+.dialogue__phrase {
+  background-color: #ddd;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.dialogue__block {
+  margin: 4px 0;
+}
+
+.form__choices .form__block {
+  background-color: #ddd;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.guide__block {
+  background-color: #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 8px 0;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+
+@import "_null";
+@import "_maccons";
+@import "_UI";
+
+.form {
+	&__block {
+		margin: 8px 0;
+	}
+	&__label {
+		display: inline-block;
+		width: 170px;
+	}
+	&__select {
+		margin-bottom: 8px;
+
+		.form__label {
+			margin-bottom: 8px;
+		}
+	}
+}
+.dialogue {
+	&__phrase {
+		background-color: #ddd;
+		padding: 8px;
+		border-radius: 8px;
+		margin: 8px 0;
+	}
+	&__block {
+		margin: 4px 0;
+	}
+}
+.form__choices .form__block {
+	background-color: #ddd;
+	padding: 8px;
+	border-radius: 8px;
+}
+.guide {
+	&__block {
+		background-color: #ddd;
+		padding: 8px 16px;
+		border-radius: 8px;
+		margin: 8px 0;	
+	}
+}
